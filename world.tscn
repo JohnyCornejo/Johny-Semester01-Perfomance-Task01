@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://duemjd0qhekrw"]
+
+[ext_resource type="Texture2D" uid="uid://bwmny50vdxvr1" path="res://assets/wallpaperCabin.jpg" id="1_85gfb"]
+[ext_resource type="PackedScene" uid="uid://bvy60eqds0yj0" path="res://player.tscn" id="2_iqcrt"]
+[ext_resource type="PackedScene" uid="uid://8q5njpvlfcmt" path="res://enemy.tscn" id="3_g2m3g"]
+[ext_resource type="AudioStream" uid="uid://dijlc3v6i0or3" path="res://assets/bg_music.mp3" id="4_7qikg"]
+[ext_resource type="AudioStream" uid="uid://25h8317w24nw" path="res://assets/enemy_hit.mp3" id="5_n1v5b"]
+
+[node name="World" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.61, 0.61)
+texture = ExtResource("1_85gfb")
+centered = false
+
+[node name="Player" parent="." instance=ExtResource("2_iqcrt")]
+position = Vector2(-120, 16)
+
+[node name="Enemy" parent="." instance=ExtResource("3_g2m3g")]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_7qikg")
+autoplay = true
+
+[node name="EnemyHit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_n1v5b")
