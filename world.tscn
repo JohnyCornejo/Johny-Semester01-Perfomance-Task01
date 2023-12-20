@@ -9,7 +9,7 @@
 [node name="World" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.61, 0.61)
+scale = Vector2(0.635937, 0.645833)
 texture = ExtResource("1_85gfb")
 centered = false
 
